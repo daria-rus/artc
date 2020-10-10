@@ -8,7 +8,7 @@
 
 ## Create remote repo and connect local
 1. Create new repo on github
-2. copy SSH 
+2. copy SSH  
 **git remote add origin git@github.com:daria-rus/ArtC.git**  
 **git pull**  
 **git push -u origin readmeFileNotes**  
