@@ -6,7 +6,7 @@
 **git add README.md**  добавление файла README.md  в локальный репозиторий в ветку readmeFileNotes.  
 **git commit -m "add README file"** сохранение текущего состояния добавленного файла в локальном репозитории.  
 
-##Create remote repo and connect local
+## Create remote repo and connect local
 1. Create new repo on github
 2. copy SSH 
 **git remote add origin git@github.com:daria-rus/ArtC.git**  
