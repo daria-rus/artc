@@ -1,31 +1,55 @@
 #include <stdio.h>
 //#include <stdlib.h>
 
-int main(){
+void bubbleSort(int array[],int);
+void printArray(int array[],int);
 
-int mas[10]={0,5,7,8,10,0,0,1,3,1};
-int i,j,buf, lenght;
-lenght =sizeof(mas)/sizeof(int);
-printf("%i\n",lenght);
+int main()
+{   
+    int array1[]={88,12,0,0,1};
+    int lenght1 = (sizeof(array1)/sizeof(int));
+   
+    bubbleSort(array1,lenght1);
+    
+
+    int array2[]={88,92,0,0,1,7,5,78};
+    int lenght2 = (sizeof(array2)/sizeof(int));
+    
+    bubbleSort(array2,lenght2);
 
 
-for (i=0;i<lenght;i++)
+    //Print sorted array
+    printArray(array1,lenght1);
+    printArray(array2,lenght2);
+
+    return 0;
+} 
+
+void bubbleSort(int array[],int lenght)
 {
-	
-  for (j=i;j<lenght;j++)
-    {
-    if (mas[i]< mas[j])
-	{	
-	buf=mas[j];
-	mas[j]=mas[i];
-	mas[i]=buf;
-	}
+    int i,j,buf;
+    printf("%i\n",lenght);
+
+    for (i=0;i<lenght;i++)
+    {	
+        for (j=i;j<lenght;j++)
+        {
+            if (array[i]< array[j])
+            {	
+                buf=array[j];
+                array[j]=array[i];
+                array[i]=buf;
+            }
+        }
     }
 }
 
-for(i=0;i<lenght;i++)
-{printf("%d  ",mas[i]);}
-printf("\n");
+void printArray(int array[],int lenght)
+{
+    for(int i=0;i<lenght;i++)
+    {
+        printf("%d  ",array[i]);
+    }
+    printf("\n");
 
-return 0;
-} 
+}
