@@ -1,10 +1,14 @@
 # Instruction togit nub
 
 ##  Create local repo
-```git init```создание локального репозитория в проектной папке.  
-```git checkout -b readmeFileNotes``` создание новой ветки readmeFileNotes и переключение в нее.  
-```git add README.md```  добавление файла README.md  в локальный репозиторий в ветку readmeFileNotes.  
-```git commit -m "add README file"``` сохранение текущего состояния добавленного файла в локальном репозитории.  
+* Cоздание локального репозитория в проектной папке.  
+```git init```  
+* Cоздание новой ветки readmeFileNotes и переключение в нее.  
+```git checkout -b readmeFileNotes```   
+* Добавление файла README.md  в локальный репозиторий в ветку readmeFileNotes.  
+```git add README.md```  
+* Сохранение текущего состояния добавленного файла в локальном репозитории.  
+```git commit -m "add README file"```  
 
 ## Create remote repo and connect local
 1. Create new repo on github
