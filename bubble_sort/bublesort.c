@@ -6,21 +6,22 @@ void printArray(int array[],int);
 
 int main()
 {   
-    int array1[]={88,12,0,0,1};
-    int lenght1 = (sizeof(array1)/sizeof(int));
+    int lenght;
+    int *array;
+    //int lenght1 = (sizeof(array1)/sizeof(int));
+    printf("Please set array length...\n");
+    scanf("%d",&lenght);
+    printf("Please set array elements...\n");
+    for (int i=0;i<lenght;i++)
+    {
+        scanf("%d",&array[i]);    
+    }
+    //Sort function
+    bubbleSort(array,lenght);
    
-    bubbleSort(array1,lenght1);
-    
-
-    int array2[]={88,92,0,0,1,7,5,78};
-    int lenght2 = (sizeof(array2)/sizeof(int));
-    
-    bubbleSort(array2,lenght2);
-
-
     //Print sorted array
-    printArray(array1,lenght1);
-    printArray(array2,lenght2);
+    printf("Here's your sorted array:\n");
+    printArray(array,lenght);
 
     return 0;
 } 
@@ -45,7 +46,7 @@ void bubbleSort(int array[],int lenght)
 }
 
 void printArray(int array[],int lenght)
-{
+{   
     for(int i=0;i<lenght;i++)
     {
         printf("%d  ",array[i]);
