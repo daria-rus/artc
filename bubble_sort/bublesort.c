@@ -8,7 +8,7 @@ int main()
 {   
     int lenght;
     int *array;
-    //int lenght1 = (sizeof(array1)/sizeof(int));
+    
     printf("Please set array length...\n");
     scanf("%d",&lenght);
     printf("Please set array elements...\n");
