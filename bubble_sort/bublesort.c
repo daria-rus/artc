@@ -7,10 +7,11 @@ void printArray(int array[],int);
 int main()
 {   
     int lenght;
-    int *array;
+    
     
     printf("Please set array length...\n");
     scanf("%d",&lenght);
+	int array[lenght];
     printf("Please set array elements...\n");
     for (int i=0;i<lenght;i++)
     {
