@@ -17,13 +17,14 @@ int main()
     {
         scanf("%d",&array[i]);    
     }
+    
     //Sort function
     bubbleSort(array,lenght);
    
     //Print sorted array
     printf("Here's your sorted array:\n");
     printArray(array,lenght);
-
+    free(array);
     return 0;
 } 
 
