@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 
 void bubbleSort(int array[],int);
@@ -7,11 +8,10 @@ void printArray(int array[],int);
 int main()
 {   
     int lenght;
-    
-    
+	int *array;
     printf("Please set array length...\n");
     scanf("%d",&lenght);
-	int array[lenght];
+	array=(int *)malloc(sizeof(int)*lenght);
     printf("Please set array elements...\n");
     for (int i=0;i<lenght;i++)
     {
