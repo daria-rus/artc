@@ -1,4 +1,4 @@
-# Instruction togit nub
+# Instruction togit newbee
 
 ##  Create local repo
 * Cоздание локального репозитория в проектной папке.  
