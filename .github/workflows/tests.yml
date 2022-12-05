@@ -23,6 +23,6 @@ jobs:
       # one line srting, but the 'run' field starts with '|', which allows to make it multi-line string.
       - name: Build and run the program.
         run: |
-            gcc hello.c
-            ./a.out
+            gcc ./hello_world/hello.c
+            ./hello_world/a.out
     
