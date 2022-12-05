@@ -6,22 +6,22 @@ on: [push]
 # but for now we just need some  # of them.
 jobs:
     # 'runs-on' specifies on which OS we run our job and we select ubuntu.
-    runs-on: ubuntu-latest
+  runs-on: ubuntu-latest
     
     # 'steps' here is a list (like ["1", "2", "3"] in JSON) but each new element of this list start with '-',
     # In our example you can see 2 steps, which are, in their turn, dictionaries.
-    steps:
+  steps:
       # The fisrt step is almost always this special step `actions/checkout@v3` which just does 'git clone' 
       # and 'git checkout'. Without that step, we simply won't get our source code files here.
-      - name: Check out repository code
-        uses: actions/checkout@v3
+    - name: Check out repository code
+      uses: actions/checkout@v3
        
       # The second step is a step where we build and run our program. Step objects can have the 'run' field 
       # where we can define our commands.
       # For better understanding: Fields 'name' and 'run' here are both strings, but the 'name' field can be only 
       # one line srting, but the 'run' field starts with '|', which allows to make it multi-line string.
-      - name: Build and run the program.
-        run: |
-            gcc hello.c
-            ./a.out
+    - name: Build and run the program.
+      run: |
+          gcc hello.c
+          ./a.out
     
