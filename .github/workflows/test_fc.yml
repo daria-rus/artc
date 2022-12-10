@@ -5,7 +5,7 @@ on: [push]
 # 'jobs' here is a "dictionary" ( like {"key":"value"} in JSON ) and it can have different fields, 
 # but for now we just need some  # of them.
 jobs:
-  test:
+  test_0:
     # 'runs-on' specifies on which OS we run our job and we select ubuntu.
     runs-on: ubuntu-latest
       
@@ -26,4 +26,19 @@ jobs:
         run: |
             gcc ./convert_to_celsius.c
             ./a.out
+  test_1:
+    # 'runs-on' specifies on which OS we run our job and we select ubuntu.
+    runs-on: ubuntu-latest
+      
+    steps:
+      # The fisrt step is almost always this special step `actions/checkout@v3` which just does 'git clone' 
+      # and 'git checkout'. Without that step, we simply won't get our source code files here.
+      - name: Check out repository code
+        uses: actions/checkout@v3
+
+      - name: Build and run the program.
+        working-directory: celsius_farenheit
+        run: |
+            gcc ./temperature_converter.c - o b.out
+            ./b.out
     
