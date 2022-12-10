@@ -39,6 +39,6 @@ jobs:
       - name: Build and run the program.
         working-directory: celsius_farenheit
         run: |
-            cc ./temperature_converter.c - o b.out
+            gcc ./temperature_converter.c - ox b.out
             ./b.out
     
