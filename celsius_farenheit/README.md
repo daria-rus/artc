@@ -16,7 +16,7 @@
 2.  Using *temperature_converter.c*
     - compile *temperature_converter.c* 
 
-    > gcc temperature_converter.c -o b.out
+    > gcc -o b.out temperature_converter.c
 
        - run *b.out*
 
