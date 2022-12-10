@@ -5,7 +5,7 @@ on: [push]
 # 'jobs' here is a "dictionary" ( like {"key":"value"} in JSON ) and it can have different fields, 
 # but for now we just need some  # of them.
 jobs:
-  test_0:
+  test_convert_to_celsius:
     # 'runs-on' specifies on which OS we run our job and we select ubuntu.
     runs-on: ubuntu-latest
       
@@ -26,7 +26,7 @@ jobs:
         run: |
             gcc ./convert_to_celsius.c
             ./a.out
-  test_1:
+  test_temperature_converter:
     # 'runs-on' specifies on which OS we run our job and we select ubuntu.
     runs-on: ubuntu-latest
       
